@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.starwars.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_fragment_to_people_detail_fragment"
+            app:destination="@id/people_details_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_planet_detail_fragment"
+            app:destination="@id/planet_details_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_filmDetailFragment"
+            app:destination="@id/film_detail_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_vehicleDetailFragment"
+            app:destination="@id/vehicle_detail_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_specieDetailFragment"
+            app:destination="@id/specie_detail_fragment" />
+        <action
+            android:id="@+id/action_home_fragment_to_starshipDetailFragment"
+            app:destination="@id/starship_detail_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/people_details_fragment"
+        android:name="com.example.starwars.fragments.PeopleDetailFragment"
+        android:label="People_details_fragment"
+        tools:layout="@layout/fragment_people_detail">
+        <argument
+            android:name="people"
+            app:argType="com.example.starwars.models.people.People" />
+        <argument
+            android:name="image"
+            app:argType="android.graphics.Bitmap" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/planet_details_fragment"
+        android:name="com.example.starwars.fragments.PlanetDetailFragment"
+        android:label="fragment_planet_details"
+        tools:layout="@layout/fragment_planet_detail" >
+        <argument
+            android:name="planet"
+            app:argType="com.example.starwars.models.planet.Planet" />
+        <argument
+            android:name="image"
+            app:argType="android.graphics.Bitmap" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/film_detail_fragment"
+        android:name="com.example.starwars.fragments.FilmDetailFragment"
+        android:label="film_detail_fragment"
+        tools:layout="@layout/fragment_film_detail">
+        <argument
+            android:name="film"
+            app:argType="com.example.starwars.models.film.Film" />
+        <argument
+            android:name="image"
+            app:argType="android.graphics.Bitmap" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/specie_detail_fragment"
+        android:name="com.example.starwars.fragments.SpecieDetailFragment"
+        android:label="fragment_specie_detail"
+        tools:layout="@layout/fragment_specie_detail">
+        <argument
+            android:name="specie"
+            app:argType="com.example.starwars.models.specie.Specie" />
+        <argument
+            android:name="image"
+            app:argType="android.graphics.Bitmap" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/vehicle_detail_fragment"
+        android:name="com.example.starwars.fragments.VehicleDetailFragment"
+        android:label="fragment_vehicle_detail"
+        tools:layout="@layout/fragment_vehicle_detail">
+        <argument
+            android:name="vehicle"
+            app:argType="com.example.starwars.models.vehicle.Vehicle" />
+        <argument
+            android:name="image"
+            app:argType="android.graphics.Bitmap" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/starship_detail_fragment"
+        android:name="com.example.starwars.fragments.StarshipDetailFragment"
+        android:label="fragment_starship_detail"
+        tools:layout="@layout/fragment_starship_detail">
+        <argument
+            android:name="starship"
+            app:argType="com.example.starwars.models.starship.Starship" />
+        <argument
+            android:name="image"
+            app:argType="android.graphics.Bitmap" />
+    </fragment>
+
+</navigation>
